@@ -39,4 +39,4 @@ public:
         *this = secondtotime(this->timetosecond() - 1 + 86400);
         return t;
     }
-}
+};
