@@ -31,3 +31,11 @@ void Label::Xuat() {
     cout << "Mau nen: ";
     cBackground.XuatMau();
 }
+
+void Label::KtrMauNenVaMauChu() {
+    if (cText.KtrPhoiMauBoTucTrucTiep(cBackground)) {
+        cout << "Mau chu va mau nen phoi mau bo tuc truc tiep.\n";
+    } else {
+        cout << "Mau chu va mau nen khong phoi mau bo tuc truc tiep.\n";
+    }
+}

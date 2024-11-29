@@ -43,3 +43,8 @@ void Website::Xuat() {
         cout << endl;
     }
 }
+
+void Website::KtrPhoiMauThanhPhanDau() {
+    cout << "Thanh phan dau: ";
+    elements[0]->KtrMauNenVaMauChu();
+}

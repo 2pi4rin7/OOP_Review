@@ -13,6 +13,7 @@ private:
 public:
     void Nhap() override;
     void Xuat() override;
+    void KtrMauNenVaMauChu() override;
 };
 
 

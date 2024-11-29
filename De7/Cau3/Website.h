@@ -13,6 +13,7 @@ public:
     ~Website();
     void Nhap();
     void Xuat();
+    void KtrPhoiMauThanhPhanDau();
 };
 
 

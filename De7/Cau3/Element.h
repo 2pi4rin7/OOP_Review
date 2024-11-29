@@ -13,6 +13,7 @@ public:
     virtual ~Element() = default;
     virtual void Nhap() = 0;
     virtual void Xuat() = 0;
+    virtual void KtrMauNenVaMauChu() = 0;
 };
 
 

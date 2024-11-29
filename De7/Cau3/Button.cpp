@@ -30,5 +30,13 @@ void Button::Xuat() {
     cText.XuatMau();
     cout << "Mau nen: ";
     cBackground.XuatMau();
-    cout << "Dang hien thi hinh anh!";
+    cout << "Dang hien thi hinh anh!\n";
+}
+
+void Button::KtrMauNenVaMauChu() {
+    if (cText.KtrPhoiMauBoTucTrucTiep(cBackground)) {
+        cout << "Mau chu va mau nen phoi mau bo tuc truc tiep.\n";
+    } else {
+        cout << "Mau chu va mau nen khong phoi mau bo tuc truc tiep.\n";
+    }
 }

@@ -6,5 +6,6 @@ int main() {
     Website w;
     w.Nhap();
     w.Xuat();
+    w.KtrPhoiMauThanhPhanDau();
     return 0;
 }

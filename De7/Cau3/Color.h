@@ -11,6 +11,8 @@ public:
     void SetMau();
     void XuatMau();
     void DoiMau(int r, int g, int b);
+    int MauTrenBanhXeMau();
+    bool KtrPhoiMauBoTucTrucTiep(Color p);
 };
 
 
