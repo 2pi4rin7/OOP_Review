@@ -3,11 +3,26 @@
 using namespace std;
 
 bool invalidColor(int r, int g, int b) {
-    return r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255;
+    if(r == 255)
+    {
+        if(g == 0) return false;
+        return ((g == 125 || g == 255) && b == 0);
+    }
+
+    else if (r == 125){
+        return (g == 0 && b == 255) || (g == 255 && b == 0); 
+    }
+
+    else if (r == 0){
+        if(g == 255) return b == 255 || b == 125 || b == 0;
+        return (g == 125 || g == 0) && b == 255;
+    }
+    
+    return true;
 }
 
 void Color::SetMau() {
-    cout << "Nhap mau RGB (red, green, blue): ";
+    cout << "Nhap mau RGB voi 3 gia tri 0,125,255: ";
     int r, g, b;
     cin >> r >> g >> b;
     while (invalidColor(r, g, b)) {
@@ -21,7 +36,8 @@ void Color::SetMau() {
 }
 
 void Color::XuatMau() {
-    cout << "Mau RGB: (" << red << ", " << green << ", " << blue << ")" << endl;
+    vector<string> color = {"Others", "Red", "Orange", "Yellow", "Spring Green", "Green", "Turquoise", "Cyan", "Ocean", "Blue", "Violet", "Magenta", "Raspberry"};
+    cout << "Mau RGB (" << red << ", " << green << ", " << blue << "): " << color[MauTrenBanhXeMau()] << endl;
 }
 
 void Color::DoiMau(int r, int g, int b) {
@@ -39,7 +55,7 @@ int Color::MauTrenBanhXeMau() {
     if (r == 255 && g == 125 && b == 0) return 2; // Orange
     if (r == 255 && g == 255 && b == 0) return 3; // Yellow
     if (r == 125 && g == 255 && b == 0) return 4; // Spring Green
-    if (r == 255 && g == 255 && b == 0) return 5; // Green
+    if (r == 0 && g == 255 && b == 0) return 5; // Green
     if (r == 0 && g == 255 && b == 125) return 6; // Turquoise
     if (r == 0 && g == 255 && b == 255) return 7; // Cyan
     if (r == 0 && g == 125 && b == 255) return 8; // Ocean 
