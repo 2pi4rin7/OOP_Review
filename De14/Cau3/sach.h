@@ -9,7 +9,8 @@ protected:
 public:
     Sach();
     Sach(string idSach, string tensach, string NXB, int soluong, int dongia);
-    void Nhap();
-    void Xuat();
-    virtual int thanhtien() = 0;
+    virtual void Nhap();
+    virtual void Xuat();
+    virtual int Thanhtien() = 0;
+    string GetNXB();
 };

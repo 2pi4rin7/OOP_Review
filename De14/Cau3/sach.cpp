@@ -44,3 +44,8 @@ void Sach::Xuat()
     cout << "So luong: " << soluong << endl;
     cout << "Don gia: " << dongia << endl;
 }
+
+string Sach::GetNXB()
+{
+    return NXB;
+}

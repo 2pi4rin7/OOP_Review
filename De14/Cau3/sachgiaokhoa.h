@@ -3,9 +3,11 @@
 
 class SachGiaoKhoa : public Sach{
 private:
-    int tinhtrang;
+    bool tinhtrang;
 public: 
+    SachGiaoKhoa();
+    SachGiaoKhoa(string idSach, string tensach, string NXB, int soluong, int dongia, bool tinhtrang);
     void Nhap();
     void Xuat();
-    int thanhtien();
+    int Thanhtien();
 };
