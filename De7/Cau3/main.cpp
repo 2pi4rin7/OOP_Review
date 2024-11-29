@@ -7,5 +7,6 @@ int main() {
     w.Nhap();
     w.Xuat();
     w.KtrPhoiMauThanhPhanDau();
+    w.KtrMauNenThanhPhan();
     return 0;
 }

@@ -1,5 +1,6 @@
 #include<iostream>
 #include "Color.h"
+#include <vector>
 using namespace std;
 
 bool invalidColor(int r, int g, int b) {

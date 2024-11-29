@@ -39,3 +39,7 @@ void Label::KtrMauNenVaMauChu() {
         cout << "Mau chu va mau nen khong phoi mau bo tuc truc tiep.\n";
     }
 }
+
+int Label::LayMauBackground() {
+    return cBackground.MauTrenBanhXeMau();
+}

@@ -40,3 +40,7 @@ void Button::KtrMauNenVaMauChu() {
         cout << "Mau chu va mau nen khong phoi mau bo tuc truc tiep.\n";
     }
 }
+
+int Button::LayMauBackground() {
+    return cBackground.MauTrenBanhXeMau();
+}

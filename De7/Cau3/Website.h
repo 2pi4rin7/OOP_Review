@@ -14,6 +14,7 @@ public:
     void Nhap();
     void Xuat();
     void KtrPhoiMauThanhPhanDau();
+    void KtrMauNenThanhPhan();
 };
 
 

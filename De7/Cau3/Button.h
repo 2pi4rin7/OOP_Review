@@ -14,6 +14,7 @@ public:
     void Nhap() override;
     void Xuat() override;
     void KtrMauNenVaMauChu() override;
+    int LayMauBackground() override;
 };
 
 
