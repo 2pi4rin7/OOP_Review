@@ -65,6 +65,7 @@ bool PhoiMauBoTuc(Element** e1, int soElement){
     {
         for (int j = 0; j < soElement; j++)
         {
+            if (i == j) continue;
             int mau1 = e1[i]->LayMauBackground();
             int mau2 = e1[j]->LayMauBackground();
             if((mau1 - mau2 + 12)%6 == 0)
