@@ -4,22 +4,20 @@
 using namespace std;
 
 bool invalidColor(int r, int g, int b) {
-    if(r == 255)
-    {
-        if(g == 0) return false;
-        return ((g == 125 || g == 255) && b == 0);
-    }
+    if (r == 255 && g == 0 && b == 0) return 0; // Red
+    if (r == 255 && g == 125 && b == 0) return 0; // Orange
+    if (r == 255 && g == 255 && b == 0) return 0; // Yellow
+    if (r == 125 && g == 255 && b == 0) return 0; // Spring Green
+    if (r == 0 && g == 255 && b == 0) return 0; // Green
+    if (r == 0 && g == 255 && b == 125) return 0; // Turquoise
+    if (r == 0 && g == 255 && b == 255) return 0; // Cyan
+    if (r == 0 && g == 125 && b == 255) return 0; // Ocean 
+    if (r == 0 && g == 0 && b == 255) return 0; // Blue
+    if (r == 125 && g == 0 && b == 255) return 0; // Violet
+    if (r == 255 && g == 0 && b == 255) return 0; // Magenta
+    if (r == 255 && g == 0 && b == 125) return 0; // Raspberry
 
-    else if (r == 125){
-        return (g == 0 && b == 255) || (g == 255 && b == 0); 
-    }
-
-    else if (r == 0){
-        if(g == 255) return b == 255 || b == 125 || b == 0;
-        return (g == 125 || g == 0) && b == 255;
-    }
-    
-    return true;
+    return true; // Different color
 }
 
 void Color::SetMau() {
