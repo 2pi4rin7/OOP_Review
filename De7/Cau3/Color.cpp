@@ -69,14 +69,7 @@ int Color::MauTrenBanhXeMau() {
 bool Color::KtrPhoiMauBoTucTrucTiep(Color p) {
     int c1 = this->MauTrenBanhXeMau();
     int c2 = p.MauTrenBanhXeMau();
-    
-    if (c1 == 1 && c2 == 7 || c1 == 7 && c2 == 1) return true;
-    if (c1 == 2 && c2 == 8 || c1 == 8 && c2 == 2) return true;
-    if (c1 == 3 && c2 == 9 || c1 == 9 && c2 == 3) return true;
-    if (c1 == 4 && c2 == 10 || c1 == 10 && c2 == 4) return true;
-    if (c1 == 5 && c2 == 11 || c1 == 11 && c2 == 5) return true;
-    if (c1 == 6 && c2 == 12 || c1 == 12 && c2 == 6) return true;
-
+    if(abs(c1 - c2) == 6) return true;
     return false;
 }
 

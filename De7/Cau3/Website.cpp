@@ -38,6 +38,7 @@ void Website::Nhap() {
 }
 
 void Website::Xuat() {
+    cout<<endl;
     for (int i = 0; i < soElement; i++) {
         cout << "Element thu " << i + 1 << endl;
         elements[i]->Xuat();
@@ -61,21 +62,25 @@ bool PhoiMauDonSac(Element** e1, int soElement) {
 
 bool PhoiMauBoTuc(Element** e1, int soElement){
     int cnt = 0;
+    if (soElement % 2 != 0)
+    {
+        return false;
+    }
     for (int i = 0; i < soElement; i++)
     {
-        for (int j = 0; j < soElement; j++)
+        for (int j = i + 1; j < soElement; j++)
         {
-            if (i == j) continue;
+            
             int mau1 = e1[i]->LayMauBackground();
             int mau2 = e1[j]->LayMauBackground();
-            if((mau1 - mau2 + 12)%6 == 0)
+            if(abs(mau1 - mau2) == 6)
             {
                 cnt ++;
                 break;
             }
         }
     }
-    if (cnt == soElement)
+    if (cnt == soElement / 2)
     {
         return true;
     }
@@ -87,9 +92,9 @@ bool PhoiMauTuongDong(Element** e1, int soElement)
     sort(e1, e1 + soElement, [](Element* a, Element* b) {
         return a->LayMauBackground() < b->LayMauBackground();
     });
-    for (int i = 0; i < soElement; i++)
+    for (int i = 0; i < soElement - 1; i++)
     {
-        if (e1[i]->LayMauBackground() != e1[(i+1)%soElement]->LayMauBackground() + 1 || e1[i]->LayMauBackground() != e1[(i+1)%soElement]->LayMauBackground())
+        if (e1[i]->LayMauBackground() + 1 != e1[(i+1)%soElement]->LayMauBackground() && e1[i]->LayMauBackground() != e1[(i+1)%soElement]->LayMauBackground())
         {
             return false;
         }
@@ -106,15 +111,15 @@ void Website::KtrMauNenThanhPhan()
     {
         cout << "Cac thanh phan co mau nen don sac.\n";
     }
-    else if(check2)
+    if(check2)
     {
         cout << "Cac thanh phan co mau nen phoi mau bo tuc.\n";
     }
-    else if(check3)
+    if(check3)
     {
         cout << "Cac thanh phan co mau nen tuong dong.\n";
     }
-    else
+    if((check1 | check2 | check3) == 0)
     {
         cout << "Cac thanh phan khong phoi theo bat ky quy tac nao.\n";
     }
