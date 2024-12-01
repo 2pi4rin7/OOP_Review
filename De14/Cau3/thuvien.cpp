@@ -57,19 +57,21 @@ void ThuVien::Xuat()
 
 void ThuVien::DSachItTienNhat()
 {
-    printf("Danh sach %d cuon sach co gia thap nhat la: \n", min(n, 10));
-    for (int i=0; i<min(n, 10); i++)
+    int thanhTienmin = sach[0]->Thanhtien();
+    printf("Danh sach sach co gia thanh tien it nhat la: \n");
+    for (int i=0; i<n; i++)
     {
-        sach[i]->Xuat();
+        if (sach[i]->Thanhtien() == thanhTienmin)
+            sach[i]->Xuat();
     }
 }
 
-void ThuVien::TimKiem(string name)
+void ThuVien::TimKiemSGK(string name)
 {
     bool flags = 0;
     for (int i = 0; i < n; i++)
     {
-        if(sach[i]->GetNXB() == name)
+        if(sach[i]->GetNXB() == name && sach[i]->GetLoai() == 1)
         {
             flags = 1;
             sach[i]->Xuat();
@@ -77,7 +79,7 @@ void ThuVien::TimKiem(string name)
     }
     if (!flags)
     {
-        cout << "Khong tim thay sach co NXB la " << name << endl;
+        cout << "Khong tim thay sach giao khoa co NXB la " << name << endl;
     }
 }
 

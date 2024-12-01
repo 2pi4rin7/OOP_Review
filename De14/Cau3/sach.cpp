@@ -49,3 +49,8 @@ string Sach::GetNXB()
 {
     return NXB;
 }
+
+int Sach::GetLoai()
+{
+    return loai;
+}

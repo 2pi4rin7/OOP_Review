@@ -4,12 +4,14 @@ using namespace std;
 
 SachThamKhao::SachThamKhao():Sach()
 {
+    loai = 2;
     thue = 0;
 }
 
 SachThamKhao::SachThamKhao(string idSach, string tensach, string NXB , int soluong , int dongia , bool thue) :
     Sach(idSach, tensach, NXB, soluong, dongia)
 {
+    loai = 2;
     this->thue = thue;
 }
 

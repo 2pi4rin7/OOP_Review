@@ -11,6 +11,6 @@ public:
     void Nhap();
     void Xuat();
     void DSachItTienNhat();
-    void TimKiem(string name);
+    void TimKiemSGK(string name);
     int TongTien();
 };

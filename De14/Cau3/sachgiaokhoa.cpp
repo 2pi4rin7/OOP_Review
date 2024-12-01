@@ -4,11 +4,13 @@ using namespace std;
 
 SachGiaoKhoa::SachGiaoKhoa() : Sach()
 {
+    loai = 1;
     tinhtrang = false;
 }
 SachGiaoKhoa::SachGiaoKhoa(string idSach, string tensach, string NXB, int soluong, int dongia, bool tinhtrang) :
     Sach(idSach, tensach, NXB, soluong, dongia)
 {
+    loai = 1;
     this->tinhtrang = tinhtrang;
 }
 void SachGiaoKhoa::Nhap()

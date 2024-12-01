@@ -6,6 +6,7 @@ protected:
     string idSach, tensach, NXB;
     int soluong;
     int dongia;
+    int loai;
 public:
     Sach();
     Sach(string idSach, string tensach, string NXB, int soluong, int dongia);
@@ -13,4 +14,5 @@ public:
     virtual void Xuat();
     virtual int Thanhtien() = 0;
     string GetNXB();
+    int GetLoai();
 };
