@@ -30,6 +30,11 @@ public:
     }
     DonThuc operator+(DonThuc dta)
     {
+        if(dta.b != b)
+        {
+            cerr<<"Khong the cong 2 don thuc khac bac"<<endl;
+            exit(1);
+        }
         DonThuc dt;
         dt.a = a + dta.a;
         dt.b = b;

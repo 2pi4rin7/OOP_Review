@@ -83,12 +83,17 @@ void ThuVien::TimKiemSGK(string name)
     }
 }
 
-int ThuVien::TongTien()
+void ThuVien::TongTien()
 {
-    int sum = 0;
+    int sumSGK = 0;
+    int sumSTK = 0;
     for (int i=0; i < n; i++)
     {
-        sum += sach[i]->Thanhtien();
+        if(sach[i]->GetLoai() == 1)
+            sumSGK += sach[i]->Thanhtien();
+        else 
+            sumSTK += sach[i]->Thanhtien();
     }
-    return sum;
+    cout << "Tong tien sach giao khoa: " << sumSGK << endl;
+    cout << "Tong tien sach tham khao: " << sumSTK << endl;
 }
