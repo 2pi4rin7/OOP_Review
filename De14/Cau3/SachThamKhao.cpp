@@ -1,5 +1,5 @@
-#include "sach.h"
-#include "sachthamkhao.h"
+#include "Sach.h"
+#include "SachThamKhao.h"
 using namespace std;
 
 SachThamKhao::SachThamKhao():Sach()
