@@ -1,7 +1,7 @@
-#include "thuvien.h"
-#include "sach.h"
-#include "sachgiaokhoa.h"
-#include "sachthamkhao.h"
+#include "ThuVien.h"
+#include "Sach.h"
+#include "SachGiaoKhoa.h"
+#include "SachThamKhao.h"
 #include <iostream>
 #include <algorithm>
 using namespace std;
