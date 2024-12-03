@@ -1,7 +1,7 @@
-#include "sach.h"
-#include "sachgiaokhoa.h"
-#include "sachthamkhao.h"
-#include "thuvien.h"
+#include "Sach.h"
+#include "SachGiaoKhoa.h"
+#include "SachThamKhao.h"
+#include "ThuVien.h"
 int main()
 {
     ThuVien tv;

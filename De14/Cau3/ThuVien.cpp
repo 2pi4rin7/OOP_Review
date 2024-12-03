@@ -9,7 +9,7 @@ using namespace std;
 ThuVien::ThuVien()
 {
     n = 0;
-    sach = new Sach*[n];
+    sach = new Sach* [n];
 }
 
 ThuVien::~ThuVien()
@@ -25,7 +25,7 @@ void ThuVien::Nhap()
 {
     cout<<"Nhap so luong sach : ";
     cin>>n;
-    sach = new Sach*[n];
+    sach = new Sach* [n];
     for(int i = 0; i < n; i ++)
     {
         cout<<"Nhap loai sach (1: sach giao khoa, 2: sach tham khao): ";
